@@ -1,0 +1,60 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    margin-inline: auto;
+    max-width: 1440px;
+}
+.leftArea{
+    position: relative;
+}
+.cardFront{
+    background: linear-gradient(163.95deg, #6348FE 4.74%, #610595 88.83%);
+    width: 447px;
+    height: 245px;
+    border-radius: 8px;
+    position: absolute;
+    top: 187px;
+    left: 164px;
+}
+.cardSembol{
+    position: absolute;
+    left: 32px;
+    top: 28px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.cardInside{
+    position: absolute;
+    width: 372px;
+    & > h1{
+        position: absolute;
+        top: 139px;
+        left: 32px;
+        display: flex;
+        align-items: center;
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 35.73px;
+        letter-spacing: 3.422222137451172px;
+        text-align: left;
+        color: white;
+    }
+}
+.userDate{
+    position: absolute;
+    width: 383px;
+    top: 200px;
+    left: 32px;
+    justify-content: space-between;
+    display: flex;
+    color: white;
+}
+.cardBack{
+    position: absolute;
+    top: 469px;
+    left: 258px;
+}
