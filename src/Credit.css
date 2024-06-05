@@ -9,7 +9,9 @@
 }
 .leftArea{
     position: relative;
+
 }
+
 .cardFront{
     background: linear-gradient(163.95deg, #6348FE 4.74%, #610595 88.83%);
     width: 447px;
@@ -18,6 +20,15 @@
     position: absolute;
     top: 187px;
     left: 164px;
+    animation: cardFront 1.6s ease-in-out forwards;
+}
+@keyframes cardFront{
+    0%{
+        left: -1000px;
+    }
+    100%{
+        left: 164px;
+    }
 }
 .cardSembol{
     position: absolute;
@@ -57,4 +68,91 @@
     position: absolute;
     top: 469px;
     left: 258px;
+    animation: cardBack 1.2s ease-in-out forwards;
+}
+@keyframes cardBack{
+    0%{
+        left: -1000px;
+    }
+    100%{
+        left: 258px;
+    }
+}
+.cardBackText{
+    position: absolute;
+    top: 111px;
+    left: 358px;
+    & > p{
+        color: white;
+    }
+}
+.formArea{
+    position: absolute;
+    width: 381px;
+    height: 352px;
+    top: 275px;
+    left: 832px;
+    animation: yukariForm 1s ease-in-out forwards;
+}
+@keyframes yukariForm{
+    0%{
+        top: -1000px;
+    }
+    100%{
+        top: 275px;
+    }
+}
+#myForm{
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+.inputBig{
+    width: 381px;
+    border-radius: 8px;
+    height: 45px;
+    border: 1px solid #DFDEE0;
+
+}
+.first{
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+.littleInput{
+    width: 80px;
+    height: 45px;
+    border-radius: 8px;
+    border: 1px solid #DFDEE0;
+
+
+}
+.dateDiv{
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.cardDate{
+    display: flex;
+
+    gap: 10px;
+}
+.ortancaInput{
+    width: 191px;
+    height: 45px;
+    border-radius: 8px;
+    border: 1px solid #DFDEE0;
+
+}
+.yeter{
+    display: flex;
+    gap: 10px;
+}
+.btn{
+    width: 381px;
+    height: 53px;
+    background: #21092F;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
 }
