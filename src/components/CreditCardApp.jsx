@@ -5,6 +5,13 @@ export function CreditCardApp() {
     const [cardDate, setCardDate] = useState("");
     const [cardYear, setCardYear] = useState("");
     const [cardCvc, setCardCvc] = useState("");
+    const [isSubmitted, setIsSubmitted] = useState(false);
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        setIsSubmitted(true);
+        
+    }
     function cardHolderChange(event) {
         setCardHolder(event.target.value);
     }
@@ -22,7 +29,7 @@ export function CreditCardApp() {
         setCardCvc(event.target.value);
     }
     return (
-   
+
         <>
         <div className="container">
             <div className="leftArea"><img src="./src/assets/img/Group 10 (1).png" alt="" /></div>
@@ -48,33 +55,38 @@ export function CreditCardApp() {
                 </div>
             </div>
             <div className="formArea">
-                <form id="myForm">
+                <form onSubmit={handleSubmit} id="myForm" >
                 <div className="first">
                     <label htmlFor="CARDHOLDER NAME">CARDHOLDER NAME</label>
-                    <input className="inputBig" type="text" name="cardHolder" onChange={cardHolderChange}   placeholder="e.g. Jane Appleseed" />
+                    <input className="inputBig allInputs" type="text" name="cardHolder" onChange={cardHolderChange}   placeholder="e.g. Jane Appleseed" />
                 </div> 
                 <div className="second">
                     <label htmlFor="CARD NUMBER">CARD NUMBER</label>
-                    <input className="inputBig" type="text" maxLength={16} name="cardNumber" onChange={cardNumberChange}  placeholder="e.g. 1234 5678 9123 0000" />
+                    <input className="inputBig allInputs" type="text" maxLength={16} name="cardNumber" onChange={cardNumberChange}  placeholder="e.g. 1234 5678 9123 0000" />
                 </div>
                 <div className="cardDate">
                     <div className="dateDiv">
                     <label htmlFor="Exp. Date (MM/YY)">Exp. Date (MM/YY)</label>
                     <div className="yeter">
-                    <input type="text" name="month" placeholder="MM" maxLength={2} onChange={cardDateChange} className="littleInput" />
-                    <input type="text" name="year" placeholder="YY" maxLength={2} onChange={cardYearChange} className="littleInput" />  
+                    <input type="text" name="month" placeholder="MM" maxLength={2} onChange={cardDateChange} className="littleInput allInputs" />
+                    <input type="text" name="year" placeholder="YY" maxLength={2} onChange={cardYearChange} className="littleInput allInputs" />  
                     </div>
 
                     </div>
                     <div className="dateDiv">
                         <label htmlFor="CVC">CVC</label>
-                        <input type="text" name="CVC" onChange={cardCvcChange} maxLength={3} placeholder="e.g. 123" className="ortancaInput" />
+                        <input type="text" name="CVC" onChange={cardCvcChange} maxLength={3} placeholder="e.g. 123" className="ortancaInput allInputs" />
                     </div>
                 </div>
-                    <button type="submit" className="btn">Confirm</button>
-
+                    <button type="submit" className="btn" onClick={handleSubmit}>Confirm</button>
+                 
 
                 </form>
+                {isSubmitted ? (
+                        <div>
+                            onaylandi
+                        </div>
+                    ) : []}
             </div>
         </div>
         </>
