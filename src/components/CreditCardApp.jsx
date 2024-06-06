@@ -68,7 +68,7 @@ export function CreditCardApp() {
                     </div>
                     <div className="dateDiv">
                         <label htmlFor="CVC">CVC</label>
-                        <input type="text" name="CVC" onChange={cardCvcChange} placeholder="e.g. 123" className="ortancaInput" />
+                        <input type="text" name="CVC" onChange={cardCvcChange} maxLength={3} placeholder="e.g. 123" className="ortancaInput" />
                     </div>
                 </div>
                     <button type="submit" className="btn">Confirm</button>
