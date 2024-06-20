@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 export function CreditCardApp() {
-    const [cardHolder, setCardHolder] = useState("");
-    const [cardNumber, setCardNumber] = useState("");
-    const [cardDate, setCardDate] = useState("");
-    const [cardYear, setCardYear] = useState("");
-    const [cardCvc, setCardCvc] = useState("");
+    const [cardHolder, setCardHolder] = useState("JANE APPLASED");
+    const [cardNumber, setCardNumber] = useState("0000 0000 0000 0000");
+    const [cardDate, setCardDate] = useState("00");
+    const [cardYear, setCardYear] = useState("00");
+    const [cardCvc, setCardCvc] = useState("000");
     const [isSubmitted, setIsSubmitted] = useState(false);
 
     const handleSubmit = (event) => {
